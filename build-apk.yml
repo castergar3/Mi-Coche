@@ -25,7 +25,7 @@ jobs:
 
       - name: Inicializar TWA
         run: |
-          bubblewrap init --manifest https://castergar3.github.io/Mi-Coche/manifest.json
+          bubblewrap init --manifest https://castergar3.github.io/index/manifest.json
 
       - name: Build APK
         run: bubblewrap build --skipPwaValidation
