@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1a2e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkdhcmFnZUxvZyIsCiAgInNob3J0X25hbWUiOiAiR2FyYWdlTG9nIiwKICAiZGVzY3JpcHRpb24iOiAiQ29udHJvbCBkZSBtYW50ZW5pbWllbnRvIGRlIHZlaGljdWxvcyIsCiAgInN0YXJ0X3VybCI6ICIuIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGYwZjE3IiwKICAidGhlbWVfY29sb3IiOiAiIzFhMWEyZSIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAiaWNvbnMiOiBbCiAgICB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S0lDQThjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXdNQ0lnWm1sc2JEMGlJekZoTVdFeVpTSXZQZ29nSUR4eVpXTjBJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQnllRDBpTVRBd0lpQm1hV3hzUFNKMWNtd29JMmNwSWk4K0NpQWdQR1JsWm5NK0NpQWdJQ0E4YkdsdVpXRnlSM0poWkdsbGJuUWdhV1E5SW1jaUlIZ3hQU0l3SWlCNU1UMGlNQ0lnZURJOUlqRWlJSGt5UFNJeElqNEtJQ0FnSUNBZ1BITjBiM0FnYjJabWMyVjBQU0l3SlNJZ2MzUnZjQzFqYjJ4dmNqMGlJMlU0TldRd05DSXZQZ29nSUNBZ0lDQThjM1J2Y0NCdlptWnpaWFE5SWpFd01DVWlJSE4wYjNBdFkyOXNiM0k5SWlObU5EaGpNRFlpTHo0S0lDQWdJRHd2YkdsdVpXRnlSM0poWkdsbGJuUStDaUFnUEM5a1pXWnpQZ29nSUR3aExTMGdZMkZ5SUdKdlpIa2dMUzArQ2lBZ1BISmxZM1FnZUQwaU9EQWlJSGs5SWpJNU1DSWdkMmxrZEdnOUlqTTFNaUlnYUdWcFoyaDBQU0k1TUNJZ2NuZzlJakU0SWlCbWFXeHNQU0lqTVdFeFlUSmxJaTgrQ2lBZ1BDRXRMU0JqWVhJZ2NtOXZaaUF0TFQ0S0lDQThjR0YwYUNCa1BTSk5NVFV3SURJNU1DQk1NVGcxSURJeE1DQlJNVGsxSURFNU5pQXlNVFVnTVRrMklFd3lPVGNnTVRrMklGRXpNVGNnTVRrMklETXlOeUF5TVRBZ1RETTJNaUF5T1RBZ1dpSWdabWxzYkQwaUl6RmhNV0V5WlNJdlBnb2dJRHdoTFMwZ2QybHVaRzkzY3lBdExUNEtJQ0E4Y0dGMGFDQmtQU0pOTVRrNElESTVNQ0JNTWpJeUlESXlPQ0JSTWpJNElESXhPQ0F5TXpnZ01qRTRJRXd5TnpRZ01qRTRJRkV5T0RRZ01qRTRJREk1TUNBeU1qZ2dURE14TkNBeU9UQWdXaUlnWm1sc2JEMGlJMlU0TldRd05DSWdiM0JoWTJsMGVUMGlNQzQxSWk4K0NpQWdQQ0V0TFNCM2FHVmxiSE1nTFMwK0NpQWdQR05wY21Oc1pTQmplRDBpTVRVNElpQmplVDBpTXpjNElpQnlQU0kwTWlJZ1ptbHNiRDBpSXpCbU1HWXhOeUl2UGdvZ0lEeGphWEpqYkdVZ1kzZzlJakUxT0NJZ1kzazlJak0zT0NJZ2NqMGlNalFpSUdacGJHdzlJaU15WlRKbE5HRWlMejRLSUNBOFkybHlZMnhsSUdONFBTSXpOVFFpSUdONVBTSXpOemdpSUhJOUlqUXlJaUJtYVd4c1BTSWpNR1l3WmpFM0lpOCtDaUFnUEdOcGNtTnNaU0JqZUQwaU16VTBJaUJqZVQwaU16YzRJaUJ5UFNJeU5DSWdabWxzYkQwaUl6SmxNbVUwWVNJdlBnb2dJRHdoTFMwZ2FHVmhaR3hwWjJoMElDMHRQZ29nSUR4eVpXTjBJSGc5SWpneUlpQjVQU0l6TURnaUlIZHBaSFJvUFNJek5pSWdhR1ZwWjJoMFBTSXhPQ0lnY25nOUlqWWlJR1pwYkd3OUlpTm1ORGhqTURZaUx6NEtJQ0E4SVMwdElIUmhhV3hzYVdkb2RDQXRMVDRLSUNBOGNtVmpkQ0I0UFNJek9UUWlJSGs5SWpNd09DSWdkMmxrZEdnOUlqTTJJaUJvWldsbmFIUTlJakU0SWlCeWVEMGlOaUlnWm1sc2JEMGlJMlU0TldRd05DSXZQZ29nSUR3aExTMGdSMHdnZEdWNGRDQXRMVDRLSUNBOGRHVjRkQ0I0UFNJeU5UWWlJSGs5SWpFM09DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSUVKc1lXTnJMQ0JCY21saGJDSWdabTl1ZEMxM1pXbG5hSFE5SWprd01DSWdabTl1ZEMxemFYcGxQU0k0TUNJZ1ptbHNiRDBpZDJocGRHVWlJRzl3WVdOcGRIazlJakF1TVRVaVBrZE1QQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9CiAgXQp9">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzFhMWEyZSIvPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTAwIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4NWQwNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNDhjMDYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gY2FyIGJvZHkgLS0+CiAgPHJlY3QgeD0iODAiIHk9IjI5MCIgd2lkdGg9IjM1MiIgaGVpZ2h0PSI5MCIgcng9IjE4IiBmaWxsPSIjMWExYTJlIi8+CiAgPCEtLSBjYXIgcm9vZiAtLT4KICA8cGF0aCBkPSJNMTUwIDI5MCBMMTg1IDIxMCBRMTk1IDE5NiAyMTUgMTk2IEwyOTcgMTk2IFEzMTcgMTk2IDMyNyAyMTAgTDM2MiAyOTAgWiIgZmlsbD0iIzFhMWEyZSIvPgogIDwhLS0gd2luZG93cyAtLT4KICA8cGF0aCBkPSJNMTk4IDI5MCBMMjIyIDIyOCBRMjI4IDIxOCAyMzggMjE4IEwyNzQgMjE4IFEyODQgMjE4IDI5MCAyMjggTDMxNCAyOTAgWiIgZmlsbD0iI2U4NWQwNCIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSB3aGVlbHMgLS0+CiAgPGNpcmNsZSBjeD0iMTU4IiBjeT0iMzc4IiByPSI0MiIgZmlsbD0iIzBmMGYxNyIvPgogIDxjaXJjbGUgY3g9IjE1OCIgY3k9IjM3OCIgcj0iMjQiIGZpbGw9IiMyZTJlNGEiLz4KICA8Y2lyY2xlIGN4PSIzNTQiIGN5PSIzNzgiIHI9IjQyIiBmaWxsPSIjMGYwZjE3Ii8+CiAgPGNpcmNsZSBjeD0iMzU0IiBjeT0iMzc4IiByPSIyNCIgZmlsbD0iIzJlMmU0YSIvPgogIDwhLS0gaGVhZGxpZ2h0IC0tPgogIDxyZWN0IHg9IjgyIiB5PSIzMDgiIHdpZHRoPSIzNiIgaGVpZ2h0PSIxOCIgcng9IjYiIGZpbGw9IiNmNDhjMDYiLz4KICA8IS0tIHRhaWxsaWdodCAtLT4KICA8cmVjdCB4PSIzOTQiIHk9IjMwOCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjE4IiByeD0iNiIgZmlsbD0iI2U4NWQwNCIvPgogIDwhLS0gR0wgdGV4dCAtLT4KICA8dGV4dCB4PSIyNTYiIHk9IjE3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBBcmlhbCIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI4MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMTUiPkdMPC90ZXh0Pgo8L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzFhMWEyZSIvPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTAwIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4NWQwNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNDhjMDYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gY2FyIGJvZHkgLS0+CiAgPHJlY3QgeD0iODAiIHk9IjI5MCIgd2lkdGg9IjM1MiIgaGVpZ2h0PSI5MCIgcng9IjE4IiBmaWxsPSIjMWExYTJlIi8+CiAgPCEtLSBjYXIgcm9vZiAtLT4KICA8cGF0aCBkPSJNMTUwIDI5MCBMMTg1IDIxMCBRMTk1IDE5NiAyMTUgMTk2IEwyOTcgMTk2IFEzMTcgMTk2IDMyNyAyMTAgTDM2MiAyOTAgWiIgZmlsbD0iIzFhMWEyZSIvPgogIDwhLS0gd2luZG93cyAtLT4KICA8cGF0aCBkPSJNMTk4IDI5MCBMMjIyIDIyOCBRMjI4IDIxOCAyMzggMjE4IEwyNzQgMjE4IFEyODQgMjE4IDI5MCAyMjggTDMxNCAyOTAgWiIgZmlsbD0iI2U4NWQwNCIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSB3aGVlbHMgLS0+CiAgPGNpcmNsZSBjeD0iMTU4IiBjeT0iMzc4IiByPSI0MiIgZmlsbD0iIzBmMGYxNyIvPgogIDxjaXJjbGUgY3g9IjE1OCIgY3k9IjM3OCIgcj0iMjQiIGZpbGw9IiMyZTJlNGEiLz4KICA8Y2lyY2xlIGN4PSIzNTQiIGN5PSIzNzgiIHI9IjQyIiBmaWxsPSIjMGYwZjE3Ii8+CiAgPGNpcmNsZSBjeD0iMzU0IiBjeT0iMzc4IiByPSIyNCIgZmlsbD0iIzJlMmU0YSIvPgogIDwhLS0gaGVhZGxpZ2h0IC0tPgogIDxyZWN0IHg9IjgyIiB5PSIzMDgiIHdpZHRoPSIzNiIgaGVpZ2h0PSIxOCIgcng9IjYiIGZpbGw9IiNmNDhjMDYiLz4KICA8IS0tIHRhaWxsaWdodCAtLT4KICA8cmVjdCB4PSIzOTQiIHk9IjMwOCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjE4IiByeD0iNiIgZmlsbD0iI2U4NWQwNCIvPgogIDwhLS0gR0wgdGV4dCAtLT4KICA8dGV4dCB4PSIyNTYiIHk9IjE3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBBcmlhbCIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI4MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMTUiPkdMPC90ZXh0Pgo8L3N2Zz4=">
+<title>GarageLog - Mantenimiento de Vehiculos</title>
+<style>
+:root {
+  --bg:#0f0f17; --surface:#1a1a2e; --card:#22223b; --border:#2e2e4a;
+  --accent:#e85d04; --accent2:#f48c06; --text:#e8e8f0; --muted:#888899;
+  --green:#4caf7d; --red:#e05252; --radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Arial,sans-serif;font-size:15px;min-height:100vh;}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-size:22px;font-weight:700;letter-spacing:-0.5px;}
+.logo span{color:var(--accent);}
+.btn-add{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:14px;font-weight:600;cursor:pointer;}
+.btn-add:hover{background:var(--accent2);}
+main{max-width:900px;margin:0 auto;padding:24px 16px;}
+.empty{text-align:center;padding:80px 24px;color:var(--muted);}
+.empty h2{font-size:20px;color:var(--text);margin-bottom:8px;}
+.empty p{font-size:14px;}
+.coche-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:20px;overflow:hidden;}
+.coche-header{padding:18px 20px;display:flex;align-items:center;gap:14px;cursor:pointer;user-select:none;}
+.coche-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.coche-info{flex:1;min-width:0;}
+.coche-modelo{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.coche-meta{font-size:13px;color:var(--muted);margin-top:2px;}
+.coche-total{text-align:right;flex-shrink:0;}
+.coche-total .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+.coche-total .amt{font-size:18px;font-weight:700;color:var(--accent);}
+.chevron{color:var(--muted);transition:transform .25s;flex-shrink:0;}
+.coche-card.open .chevron{transform:rotate(180deg);}
+.coche-body{display:none;border-top:1px solid var(--border);}
+.coche-card.open .coche-body{display:block;}
+.stats-bar{display:flex;gap:1px;background:var(--border);}
+.stat{flex:1;background:var(--surface);padding:12px 16px;}
+.stat .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.stat .val{font-weight:600;font-size:15px;}
+.coche-actions{padding:14px 20px;display:flex;gap:10px;flex-wrap:wrap;}
+.btn-sm{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px;}
+.btn-sm:hover{background:var(--border);}
+.btn-sm.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn-sm.primary:hover{background:var(--accent2);}
+.btn-sm.danger{color:var(--red);border-color:#3a2020;}
+.btn-sm.danger:hover{background:#2a1515;border-color:var(--red);}
+.regs-wrap{padding:0 20px 20px;}
+.regs-titulo{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;}
+.regs-empty{text-align:center;padding:28px;background:var(--surface);border-radius:8px;border:1px dashed var(--border);color:var(--muted);font-size:14px;}
+.reg-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;}
+.reg-desc{font-weight:500;font-size:15px;margin-bottom:4px;}
+.reg-meta{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;margin-bottom:4px;}
+.reg-taller{font-size:12px;color:var(--muted);font-style:italic;}
+.reg-right{text-align:right;}
+.reg-coste{font-weight:700;font-size:16px;color:var(--green);white-space:nowrap;}
+.reg-btns{display:flex;gap:6px;justify-content:flex-end;margin-top:4px;}
+.btn-icon{background:none;border:none;color:var(--muted);cursor:pointer;padding:4px 6px;border-radius:4px;font-size:13px;font-weight:500;}
+.btn-icon:hover{color:var(--text);background:var(--border);}
+.btn-icon.del:hover{color:var(--red);}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:16px;}
+.overlay.show{display:flex;}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:16px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;padding:28px 24px;position:relative;}
+.modal h2{font-size:20px;font-weight:700;margin-bottom:24px;}
+.modal h2 span{color:var(--accent);}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:13px;font-weight:500;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
+.form-group input,.form-group textarea{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:15px;padding:10px 14px;outline:none;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent);}
+.form-group textarea{resize:vertical;min-height:80px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.modal-actions{display:flex;gap:10px;margin-top:24px;justify-content:flex-end;}
+.btn-cancel{background:none;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:10px 20px;font-family:inherit;font-size:15px;cursor:pointer;}
+.btn-cancel:hover{background:var(--border);}
+.btn-save{background:var(--accent);border:none;color:#fff;border-radius:8px;padding:10px 24px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;}
+.btn-save:hover{background:var(--accent2);}
+.close-btn{position:absolute;top:16px;right:16px;background:var(--border);border:none;color:var(--muted);width:30px;height:30px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.close-btn:hover{color:var(--text);}
+.notas-bar{padding:12px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#fff;font-size:14px;font-weight:600;padding:12px 24px;border-radius:8px;z-index:999;transition:transform .3s;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+@media(max-width:500px){.form-row{grid-template-columns:1fr;}.stats-bar{flex-wrap:wrap;}.stat{min-width:50%;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Garage<span>Log</span></div>
+  <button class="btn-add" id="btnNuevoCoche">+ Añadir coche</button>
+</header>
+
+<main id="main"></main>
+
+<!-- MODAL COCHE -->
+<div class="overlay" id="overlayCoche">
+  <div class="modal">
+    <button class="close-btn" id="cerrarCoche">x</button>
+    <h2 id="tituloModalCoche">Nuevo <span>vehiculo</span></h2>
+    <input type="hidden" id="editCocheId">
+    <div class="form-row">
+      <div class="form-group"><label>Marca y modelo</label><input type="text" id="cModelo" placeholder="Ej: Citroen C4"></div>
+      <div class="form-group"><label>Matricula</label><input type="text" id="cMatricula" placeholder="Ej: 1234 ABC"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Fecha de compra</label><input type="date" id="cFecha"></div>
+      <div class="form-group"><label>Precio de compra (EUR)</label><input type="number" id="cPrecio" placeholder="0" min="0"></div>
+    </div>
+    <div class="form-group"><label>Kilometros al comprar</label><input type="number" id="cKm" placeholder="0" min="0"></div>
+    <div class="form-group"><label>Notas (opcional)</label><textarea id="cNotas" placeholder="Color, extras, observaciones..."></textarea></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="cancelarCoche">Cancelar</button>
+      <button class="btn-save" id="guardarCocheBtn">Guardar vehiculo</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL REGISTRO -->
+<div class="overlay" id="overlayRegistro">
+  <div class="modal">
+    <button class="close-btn" id="cerrarRegistro">x</button>
+    <h2 id="tituloModalReg">Nuevo <span>registro</span></h2>
+    <input type="hidden" id="editRegId">
+    <input type="hidden" id="editRegCocheId">
+    <div class="form-row">
+      <div class="form-group"><label>Fecha</label><input type="date" id="rFecha"></div>
+      <div class="form-group"><label>Kilometros actuales</label><input type="number" id="rKm" placeholder="0" min="0"></div>
+    </div>
+    <div class="form-group"><label>Descripcion del trabajo</label><textarea id="rDescripcion" placeholder="Ej: Cambio de aceite y filtros, revision de frenos..."></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label>Coste (EUR)</label><input type="number" id="rCoste" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Taller</label><input type="text" id="rTaller" placeholder="Nombre del taller"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="cancelarRegistro">Cancelar</button>
+      <button class="btn-save" id="guardarRegistroBtn">Guardar registro</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+var STORAGE_KEY = 'garagelog_v1';
+
+function cargarDatos() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { coches: [] }; }
+  catch(e) { return { coches: [] }; }
+}
+
+function guardarDatos(d) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(d));
+}
+
+function genId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+}
+
+function fmtEUR(n) {
+  var v = parseFloat(n) || 0;
+  return v.toLocaleString('es-ES', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' EUR';
+}
+
+function fmtKm(n) {
+  return (parseInt(n)||0).toLocaleString('es-ES') + ' km';
+}
+
+function fmtFecha(s) {
+  if (!s) return '-';
+  var p = s.split('-');
+  return p[2] + '/' + p[1] + '/' + p[0];
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2500);
+}
+
+/* ── RENDER ─────────────────────────── */
+function render() {
+  var datos = cargarDatos();
+  var main = document.getElementById('main');
+  if (!datos.coches.length) {
+    main.innerHTML = '<div class="empty"><h2>Sin vehiculos todavia</h2><p>Pulsa "+ Añadir coche" para empezar a registrar el mantenimiento de tu flota.</p></div>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < datos.coches.length; i++) {
+    html += buildCocheCard(datos.coches[i]);
+  }
+  main.innerHTML = html;
+
+  var headers = document.querySelectorAll('.coche-header');
+  for (var j = 0; j < headers.length; j++) {
+    (function(h){
+      h.addEventListener('click', function(){
+        h.closest('.coche-card').classList.toggle('open');
+      });
+    })(headers[j]);
+  }
+
+  var editBtns = document.querySelectorAll('[data-action]');
+  for (var k = 0; k < editBtns.length; k++) {
+    (function(btn){
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var action = btn.getAttribute('data-action');
+        var cid = btn.getAttribute('data-cid');
+        var rid = btn.getAttribute('data-rid');
+        if (action === 'edit-coche') abrirModalCoche(cid);
+        else if (action === 'del-coche') eliminarCoche(cid);
+        else if (action === 'add-reg') abrirModalRegistro(cid, null);
+        else if (action === 'edit-reg') abrirModalRegistro(cid, rid);
+        else if (action === 'del-reg') eliminarRegistro(cid, rid);
+      });
+    })(editBtns[k]);
+  }
+}
+
+function buildCocheCard(coche) {
+  var registros = coche.registros || [];
+  var costoRep = 0;
+  for (var i = 0; i < registros.length; i++) {
+    costoRep += parseFloat(registros[i].coste) || 0;
+  }
+  var costoTotal = (parseFloat(coche.precio)||0) + costoRep;
+
+  var regsHtml = '';
+  if (!registros.length) {
+    regsHtml = '<div class="regs-empty">Sin registros aun. Añade la primera revision o reparacion.</div>';
+  } else {
+    for (var j = registros.length - 1; j >= 0; j--) {
+      var r = registros[j];
+      regsHtml += '<div class="reg-item">' +
+        '<div>' +
+          '<div class="reg-desc">' + esc(r.descripcion) + '</div>' +
+          '<div class="reg-meta"><span>Fecha: ' + fmtFecha(r.fecha) + '</span><span>Km: ' + fmtKm(r.km) + '</span></div>' +
+          (r.taller ? '<div class="reg-taller">Taller: ' + esc(r.taller) + '</div>' : '') +
+        '</div>' +
+        '<div class="reg-right">' +
+          '<div class="reg-coste">' + fmtEUR(r.coste) + '</div>' +
+          '<div class="reg-btns">' +
+            '<button class="btn-icon" data-action="edit-reg" data-cid="' + coche.id + '" data-rid="' + r.id + '">Editar</button>' +
+            '<button class="btn-icon del" data-action="del-reg" data-cid="' + coche.id + '" data-rid="' + r.id + '">Borrar</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }
+  }
+
+  var notasHtml = coche.notas ? '<div class="notas-bar">Notas: ' + esc(coche.notas) + '</div>' : '';
+
+  return '<div class="coche-card" id="coche-' + coche.id + '">' +
+    '<div class="coche-header">' +
+      '<div class="coche-icon">&#128663;</div>' +
+      '<div class="coche-info">' +
+        '<div class="coche-modelo">' + esc(coche.modelo) + '</div>' +
+        '<div class="coche-meta">' + esc(coche.matricula) + (coche.fecha ? ' &middot; Comprado el ' + fmtFecha(coche.fecha) : '') + '</div>' +
+      '</div>' +
+      '<div class="coche-total">' +
+        '<div class="lbl">Coste total</div>' +
+        '<div class="amt">' + fmtEUR(costoTotal) + '</div>' +
+      '</div>' +
+      '<svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>' +
+    '</div>' +
+    '<div class="coche-body">' +
+      '<div class="stats-bar">' +
+        '<div class="stat"><div class="lbl">Compra</div><div class="val">' + fmtEUR(coche.precio) + '</div></div>' +
+        '<div class="stat"><div class="lbl">Reparaciones</div><div class="val">' + fmtEUR(costoRep) + '</div></div>' +
+        '<div class="stat"><div class="lbl">Km iniciales</div><div class="val">' + fmtKm(coche.km) + '</div></div>' +
+        '<div class="stat"><div class="lbl">Registros</div><div class="val">' + registros.length + '</div></div>' +
+      '</div>' +
+      notasHtml +
+      '<div class="coche-actions">' +
+        '<button class="btn-sm primary" data-action="add-reg" data-cid="' + coche.id + '">+ Añadir registro</button>' +
+        '<button class="btn-sm" data-action="edit-coche" data-cid="' + coche.id + '">Editar coche</button>' +
+        '<button class="btn-sm danger" data-action="del-coche" data-cid="' + coche.id + '">Eliminar coche</button>' +
+      '</div>' +
+      '<div class="regs-wrap">' +
+        '<div class="regs-titulo">Historial (' + registros.length + ')</div>' +
+        regsHtml +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+/* ── MODAL COCHE ─────────────────────── */
+function abrirModalCoche(cocheId) {
+  document.getElementById('editCocheId').value = '';
+  document.getElementById('tituloModalCoche').innerHTML = 'Nuevo <span>vehiculo</span>';
+  document.getElementById('cModelo').value = '';
+  document.getElementById('cMatricula').value = '';
+  document.getElementById('cPrecio').value = '';
+  document.getElementById('cKm').value = '';
+  document.getElementById('cNotas').value = '';
+  document.getElementById('cFecha').value = new Date().toISOString().slice(0,10);
+
+  if (cocheId) {
+    var datos = cargarDatos();
+    for (var i = 0; i < datos.coches.length; i++) {
+      if (datos.coches[i].id === cocheId) {
+        var c = datos.coches[i];
+        document.getElementById('editCocheId').value = c.id;
+        document.getElementById('tituloModalCoche').innerHTML = 'Editar <span>vehiculo</span>';
+        document.getElementById('cModelo').value = c.modelo || '';
+        document.getElementById('cMatricula').value = c.matricula || '';
+        document.getElementById('cFecha').value = c.fecha || '';
+        document.getElementById('cPrecio').value = c.precio || '';
+        document.getElementById('cKm').value = c.km || '';
+        document.getElementById('cNotas').value = c.notas || '';
+        break;
+      }
+    }
+  }
+  document.getElementById('overlayCoche').classList.add('show');
+  document.getElementById('cModelo').focus();
+}
+
+function guardarCoche() {
+  var modelo = document.getElementById('cModelo').value.trim();
+  if (!modelo) { alert('El modelo es obligatorio.'); return; }
+  var datos = cargarDatos();
+  var editId = document.getElementById('editCocheId').value;
+  var obj = {
+    modelo: modelo,
+    matricula: document.getElementById('cMatricula').value.trim(),
+    fecha: document.getElementById('cFecha').value,
+    precio: parseFloat(document.getElementById('cPrecio').value) || 0,
+    km: parseInt(document.getElementById('cKm').value) || 0,
+    notas: document.getElementById('cNotas').value.trim()
+  };
+  if (editId) {
+    for (var i = 0; i < datos.coches.length; i++) {
+      if (datos.coches[i].id === editId) {
+        datos.coches[i] = Object.assign(datos.coches[i], obj);
+        break;
+      }
+    }
+  } else {
+    obj.id = genId();
+    obj.registros = [];
+    datos.coches.push(obj);
+  }
+  guardarDatos(datos);
+  document.getElementById('overlayCoche').classList.remove('show');
+  render();
+  if (editId) {
+    var card = document.getElementById('coche-' + editId);
+    if (card) card.classList.add('open');
+  }
+  showToast(editId ? 'Vehiculo actualizado' : 'Vehiculo añadido');
+}
+
+function eliminarCoche(id) {
+  if (!confirm('Eliminar este vehiculo y todos sus registros? Esta accion no se puede deshacer.')) return;
+  var datos = cargarDatos();
+  var nuevos = [];
+  for (var i = 0; i < datos.coches.length; i++) {
+    if (datos.coches[i].id !== id) nuevos.push(datos.coches[i]);
+  }
+  datos.coches = nuevos;
+  guardarDatos(datos);
+  render();
+  showToast('Vehiculo eliminado');
+}
+
+/* ── MODAL REGISTRO ──────────────────── */
+function abrirModalRegistro(cocheId, regId) {
+  document.getElementById('editRegId').value = '';
+  document.getElementById('editRegCocheId').value = cocheId;
+  document.getElementById('tituloModalReg').innerHTML = 'Nuevo <span>registro</span>';
+  document.getElementById('rDescripcion').value = '';
+  document.getElementById('rTaller').value = '';
+  document.getElementById('rCoste').value = '';
+  document.getElementById('rKm').value = '';
+  document.getElementById('rFecha').value = new Date().toISOString().slice(0,10);
+
+  if (regId) {
+    var datos = cargarDatos();
+    for (var i = 0; i < datos.coches.length; i++) {
+      if (datos.coches[i].id === cocheId) {
+        var regs = datos.coches[i].registros || [];
+        for (var j = 0; j < regs.length; j++) {
+          if (regs[j].id === regId) {
+            var r = regs[j];
+            document.getElementById('editRegId').value = r.id;
+            document.getElementById('tituloModalReg').innerHTML = 'Editar <span>registro</span>';
+            document.getElementById('rFecha').value = r.fecha || '';
+            document.getElementById('rKm').value = r.km || '';
+            document.getElementById('rDescripcion').value = r.descripcion || '';
+            document.getElementById('rCoste').value = r.coste || '';
+            document.getElementById('rTaller').value = r.taller || '';
+            break;
+          }
+        }
+        break;
+      }
+    }
+  }
+  document.getElementById('overlayRegistro').classList.add('show');
+  document.getElementById('rDescripcion').focus();
+}
+
+function guardarRegistro() {
+  var descripcion = document.getElementById('rDescripcion').value.trim();
+  if (!descripcion) { alert('La descripcion es obligatoria.'); return; }
+  var datos = cargarDatos();
+  var cocheId = document.getElementById('editRegCocheId').value;
+  var editId = document.getElementById('editRegId').value;
+  var coche = null;
+  for (var i = 0; i < datos.coches.length; i++) {
+    if (datos.coches[i].id === cocheId) { coche = datos.coches[i]; break; }
+  }
+  if (!coche) return;
+  var obj = {
+    fecha: document.getElementById('rFecha').value,
+    km: parseInt(document.getElementById('rKm').value) || 0,
+    descripcion: descripcion,
+    coste: parseFloat(document.getElementById('rCoste').value) || 0,
+    taller: document.getElementById('rTaller').value.trim()
+  };
+  if (editId) {
+    for (var j = 0; j < coche.registros.length; j++) {
+      if (coche.registros[j].id === editId) {
+        coche.registros[j] = Object.assign(coche.registros[j], obj);
+        break;
+      }
+    }
+  } else {
+    obj.id = genId();
+    coche.registros.push(obj);
+  }
+  guardarDatos(datos);
+  document.getElementById('overlayRegistro').classList.remove('show');
+  render();
+  var card = document.getElementById('coche-' + cocheId);
+  if (card) card.classList.add('open');
+  showToast(editId ? 'Registro actualizado' : 'Registro guardado');
+}
+
+function eliminarRegistro(cocheId, regId) {
+  if (!confirm('Eliminar este registro?')) return;
+  var datos = cargarDatos();
+  for (var i = 0; i < datos.coches.length; i++) {
+    if (datos.coches[i].id === cocheId) {
+      var nuevos = [];
+      for (var j = 0; j < datos.coches[i].registros.length; j++) {
+        if (datos.coches[i].registros[j].id !== regId) nuevos.push(datos.coches[i].registros[j]);
+      }
+      datos.coches[i].registros = nuevos;
+      break;
+    }
+  }
+  guardarDatos(datos);
+  render();
+  var card = document.getElementById('coche-' + cocheId);
+  if (card) card.classList.add('open');
+  showToast('Registro eliminado');
+}
+
+/* ── EVENTOS FIJOS ──────────────────── */
+document.getElementById('btnNuevoCoche').addEventListener('click', function(){ abrirModalCoche(null); });
+document.getElementById('cerrarCoche').addEventListener('click', function(){ document.getElementById('overlayCoche').classList.remove('show'); });
+document.getElementById('cancelarCoche').addEventListener('click', function(){ document.getElementById('overlayCoche').classList.remove('show'); });
+document.getElementById('guardarCocheBtn').addEventListener('click', guardarCoche);
+document.getElementById('cerrarRegistro').addEventListener('click', function(){ document.getElementById('overlayRegistro').classList.remove('show'); });
+document.getElementById('cancelarRegistro').addEventListener('click', function(){ document.getElementById('overlayRegistro').classList.remove('show'); });
+document.getElementById('guardarRegistroBtn').addEventListener('click', guardarRegistro);
+
+document.getElementById('overlayCoche').addEventListener('click', function(e){ if(e.target===this) this.classList.remove('show'); });
+document.getElementById('overlayRegistro').addEventListener('click', function(e){ if(e.target===this) this.classList.remove('show'); });
+
+render();
+</script>
+</body>
+</html>
