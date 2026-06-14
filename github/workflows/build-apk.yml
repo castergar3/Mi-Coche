@@ -1,0 +1,37 @@
+name: Build PWA APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Instalar Bubblewrap
+        run: npm install -g @bubblewrap/cli
+
+      - name: Inicializar TWA
+        run: |
+          bubblewrap init --manifest https://castergar3.github.io/Mi-Coche/manifest.json
+
+      - name: Build APK
+        run: bubblewrap build --skipPwaValidation
+
+      - name: Subir APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: GarageLog-apk
+          path: app/build/outputs/apk/release/*.apk
